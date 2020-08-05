@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/left_arrow"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geomanist_regular"
+            android:text="Refund"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"/>
+        <ImageView
+            android:id="@+id/img_send"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/send"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgGray"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_bg_white"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+
+
+            <Spinner
+                android:id="@+id/spinner_service_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:layout_gravity="center"
+
+                android:dropDownVerticalOffset="30dp"
+                android:fontFamily="@font/geomanist_regular"
+                android:textSize="14dp"
+                android:theme="@style/style_Spinner" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Refund Amount"
+                android:layout_marginRight="10dp"
+                android:inputType="number"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/geomanist_regular"
+                android:textColorHint="@color/colorGrayText"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_white"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/btn_bg_white"
+                android:hint="Refund Reason"
+                android:gravity="start"
+                android:inputType="text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geomanist_regular"
+                android:textColorHint="@color/colorGrayText"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp">
+            <Button
+                android:id="@+id/btn_accept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/btn_bg_orange_fill"
+                android:text="ACCEPT"
+                android:fontFamily="@font/geomanist_regular"
+                android:textColor="@color/colorPrimary"
+                android:layout_weight="0.5"
+                />
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"/>
+            <Button
+                android:id="@+id/btn_decline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/btn_bg_gray_fill"
+                android:text="DECLINE"
+                android:fontFamily="@font/geomanist_regular"
+                android:textColor="@color/colorPrimary"
+                android:layout_weight="0.5"
+
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorBlack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/geomanist_regular"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <include
+                layout="@layout/adapter_chat_from"/>
+            <include
+                layout="@layout/adapter_chat_to"/>
+        </LinearLayout>
+</ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

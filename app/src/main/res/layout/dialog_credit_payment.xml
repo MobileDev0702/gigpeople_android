@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Credit Card"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/hinted_geomanist_book"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            />
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/close_icon"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorBgGray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:visibility="gone"
+
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plan"
+                android:fontFamily="@font/geomanist_regular"
+                android:textAlignment="viewEnd"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="17sp"
+
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/geomanist_regular"
+                android:text="Plan"/>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:background="@android:color/transparent"
+                    android:hint="Card No"
+                    android:padding="5dp"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    tools:ignore="LabelFor,NegativeMargin"
+                    android:id="@+id/cardno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <EditText
+                    android:id="@+id/cardMonthEditText"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:textSize="17dp"
+                    android:hint="MM"
+                    android:maxLength="2"
+                    android:inputType="date" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <EditText
+                    android:id="@+id/cardYearEditText"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:textSize="17dp"
+                    android:hint="YYYY"
+                    android:maxLength="4"
+                    android:inputType="date" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <EditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textSize="17dp"
+                    android:hint="Cvv"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:id="@+id/cardCVCEditText" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="SUBMIT"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/geomanist_regular"
+        android:textColor="@color/colorPrimary"
+        android:layout_weight="0.5"
+        />
+</LinearLayout>

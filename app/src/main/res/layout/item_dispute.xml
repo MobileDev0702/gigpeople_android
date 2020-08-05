@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geomanist_regular"
+                android:layout_weight="0.5"
+                android:text="Created On"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geomanist_regular"
+                android:text="12/02/2019"
+                android:layout_weight="0.5"
+                android:gravity="end"
+
+                android:textColor="@color/colorBlue"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorBgGray"/>
+
+        <TextView
+            android:id="@+id/txt_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Graphic Design"
+            android:fontFamily="@font/geomanist_regular"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/geomanist_regular"
+    android:layout_marginTop="10dp"
+    android:text="Reason"
+    android:textStyle="bold"
+    android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geomanist_regular"
+            android:text="Lorem ipsum dolor sit amit ,adipiscing elit , Lorem ipsom consectotoor adipisoing elit"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refund Amount: "
+        android:textSize="16sp"
+        android:textColor="@color/colorGrayText"
+        android:textStyle="bold"
+        android:fontFamily="@font/geomanist_regular"/>
+
+    <TextView
+        android:id="@+id/txt_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" $2.00"
+        android:textSize="18sp"
+        android:textColor="@color/colorGreen"
+        android:layout_weight="0.5"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:text="OPEN"
+        android:fontFamily="@font/geomanist_regular"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"/>
+</LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

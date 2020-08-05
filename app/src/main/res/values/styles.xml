@@ -1,0 +1,153 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppThemes" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorBlack</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="android:textColorSecondary">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/hinted_geomanist_book</item>
+    </style>
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">5dp</item>
+        <item name="android:colorControlNormal" tools:ignore="NewApi">@color/colorBlack</item>
+
+        <item name="android:popupBackground">@drawable/btn_bg_gray_outline</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBgGray</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorAccent">@color/yellow</item>
+        <item name="android:height">8dp</item>
+        <item name="android:background">@color/yellow</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle1" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryDark">@color/colorBlue</item>
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="android:height">8dp</item>
+        <item name="android:background">@color/colorBlue</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle2" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="colorPrimary">@color/colorGreen</item>
+        <item name="colorPrimaryDark">@color/colorGreen</item>
+        <item name="colorAccent">@color/colorGreen</item>
+        <item name="android:height">8dp</item>
+        <item name="android:background">@color/colorGreen</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle3" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:height">8dp</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle4" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="colorPrimary">@color/colorRed</item>
+        <item name="colorPrimaryDark">@color/colorRed</item>
+        <item name="colorAccent">@color/colorRed</item>
+        <item name="android:height">8dp</item>
+        <item name="android:background">@color/colorRed</item>
+    </style>
+
+    <style name="AppPageControlStyle">
+        <!-- To change indicator size -->
+        <item name="apc_indicatorSize">3dp</item>
+        <!-- To change distance between indicators -->
+        <item name="apc_indicatorDistance">3dp</item>
+        <!-- To change current item indicator size -->
+        <item name="apc_currentIndicatorSize">5dp</item>
+        <!-- To change indicator colors -->
+        <item name="apc_colorCurrentDefault">#000000</item>
+        <item name="apc_colorCurrentPressed">#000000</item>
+        <item name="apc_colorNormalDefault">@color/colorGrayText</item>
+        <item name="apc_colorNormalPressed">#000000</item>
+    </style>
+
+    <style name="MyTabTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/geomanist_regular</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.WalkThrough" parent="AppTheme">
+        <item name="apcStyles">@style/AppPageControlStyleTwo</item>
+    </style>
+
+    <style name="RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="colorControlNormal">@color/colorGrayText</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
+    <style name="style_Spinner" parent="Widget.AppCompat.ListView.DropDown">
+
+        <item name="android:divider">@color/colorGrayText</item>
+        <item name="android:dividerHeight">2dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+
+
+    </style>
+
+    <style name="AppPageControlStyleTwo">
+        <item name="apc_colorCurrentDefault">@color/colorAccent</item>
+        <item name="apc_colorCurrentPressed">@color/colorAccent</item>
+        <item name="apc_colorNormalDefault">@color/colorPrimary</item>
+        <item name="apc_colorNormalPressed">@color/colorPrimary</item>
+        <item name="apc_indicatorSize">4dp</item>
+        <item name="apc_currentIndicatorSize">5dp</item>
+        <item name="apc_indicatorDistance">3dp</item>
+    </style>
+
+    <style name="AppTheme.WalkThroughs" parent="AppTheme">
+        <item name="apcStyles">@style/AppPageControlStyleTwos</item>
+    </style>
+
+    <style name="AppPageControlStyleTwos">
+        <item name="apc_colorCurrentDefault">@color/colorAccent</item>
+        <item name="apc_colorCurrentPressed">@color/colorAccent</item>
+        <item name="apc_colorNormalDefault">@color/colorPrimary</item>
+        <item name="apc_colorNormalPressed">@color/colorPrimary</item>
+        <item name="apc_indicatorSize">4dp</item>
+        <item name="apc_currentIndicatorSize">5dp</item>
+        <item name="apc_indicatorDistance">3dp</item>
+    </style>
+
+</resources>

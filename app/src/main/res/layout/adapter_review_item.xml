@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/profile_placeholder"
+                    android:id="@+id/profile_img"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+
+
+                android:layout_weight="1"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/geomanist_regular"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/txt_14"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="John Peter"/>
+                <TextView
+                    android:id="@+id/txt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/geomanist_regular"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/txt_12"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:text="Lorem Ipsum has been the industry's standard dummy "/>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/img_fav"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:src="@drawable/review_one"/>
+
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                >
+
+
+                    <TextView
+                        android:id="@+id/txt_time"
+                        android:textSize="@dimen/txt_10"
+                        android:text="September 24, 2019"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+
+                        android:fontFamily="@font/hinted_geomanist_book"
+                        android:layout_weight="1"/>
+                    <RatingBar
+                        android:theme="@style/RatingBar"
+                        android:stepSize="1"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:id="@+id/ratingbar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                      <!--  <LinearLayout
+                            android:id="@+id/lin_5star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/fivestar"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/five_star"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_4star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:id="@+id/img_4star"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/four_star"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_3star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:id="@+id/img_3star"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/three_star"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_2star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:id="@+id/img_2star"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/two_star"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_1star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:id="@+id/img_onestar"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/gray_1star"/>
+
+                        </LinearLayout>
+-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorBg"/>
+
+
+
+
+
+
+</LinearLayout>

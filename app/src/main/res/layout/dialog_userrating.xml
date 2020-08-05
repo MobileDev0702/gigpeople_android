@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/geomanist_regular"
+        android:textColor="@color/colorBlack"
+        android:text=""
+        android:textAlignment="center"
+
+
+        android:layout_weight="0.5"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+
+        android:src="@drawable/close_icon"/>
+</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Feedback"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/hinted_geomanist_regular_0"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="20dp">
+<LinearLayout
+    android:id="@+id/lin_5star"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+  >
+    <ImageView
+        android:id="@+id/fivestar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/gray_5star"/>
+
+</LinearLayout>
+   <View
+       android:layout_width="5dp"
+       android:layout_height="0dp"/>
+    <LinearLayout
+        android:id="@+id/lin_4star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+     >
+        <ImageView
+            android:id="@+id/img_4star"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/gray_4star"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="5dp"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:id="@+id/lin_3star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+  >
+        <ImageView
+            android:id="@+id/img_3star"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/gray_3star"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="5dp"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:id="@+id/lin_2star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+     >
+        <ImageView
+            android:id="@+id/img_2star"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/gray_2star"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="5dp"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:id="@+id/lin_1star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/img_onestar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/gray_1star"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/btn_bg_gray_outline"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:gravity="start"
+                android:hint="Type your Feedback..."
+                android:imeOptions="actionDone"
+                android:padding="10dp"
+                android:fontFamily="@font/geomanist_regular"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:text="SUBMIT"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/geomanist_regular"
+            android:background="@drawable/btn_bg_orange_fill"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="vertical"
+    android:text="Phone call"
+    android:gravity="center|start"
+    android:textSize="14dp"
+    android:paddingLeft="15dp"
+    android:fontFamily="@font/geomanist_regular"
+    android:background="@color/colorAccent"
+    android:textColor="@color/colorPrimary">
+
+   <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Phone call"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"/>-->
+
+</TextView>

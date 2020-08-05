@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/layouttop"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/im_back"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/geomanist_regular"
+                android:gravity="center"
+                android:text="Help"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layouttop"
+
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtanswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/geomanist_regular"
+            android:text="Enter the email address you use for PayPal and click Next."
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp" />
+    <!--  </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorBgGray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/txt_10"
+            android:layout_below="@+id/relative_layout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/forward_right"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/txt_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/geomanist_regular"
+                        android:text="Go to our Log In page."
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/forward_right"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/geomanist_regular"
+        android:text="Click Having trouble logging in?"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp" />
+</LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:orientation="horizontal">
+                   <ImageView
+                       android:layout_width="10dp"
+                       android:layout_height="10dp"
+                       android:src="@drawable/forward_right"
+                       android:layout_gravity="center"/>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:fontFamily="@font/geomanist_regular"
+                       android:text="Enter the email address you use for PayPal and click Next."
+                       android:textColor="@color/colorBlack"
+                       android:textSize="15dp" />
+               </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+                  <ImageView
+                      android:layout_width="10dp"
+                      android:layout_height="10dp"
+                      android:src="@drawable/forward_right"
+                      android:layout_gravity="center"/>
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:fontFamily="@font/geomanist_regular"
+                      android:text="Select how you want to recover your password, and click Next."
+                      android:textColor="@color/colorBlack"
+
+                      android:textSize="15dp" />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <ImageView
+                      android:layout_width="10dp"
+                      android:layout_height="10dp"
+                      android:src="@drawable/forward_right"
+                      android:layout_gravity="center"/>
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:fontFamily="@font/geomanist_regular"
+                      android:text="If you choose to Answer security questions, enter your answers and click Continue. We may ask you to confirm your card number. We'll then ask you to create a new password and confirm it by entering it a second time."
+                      android:textColor="@color/colorBlack"
+                      android:textSize="15dp" />
+              </LinearLayout>
+
+          veLayout>
+</LinearLayout>
+
+    </LinearLayout>
+
+<LinearLayout
+android:id="@+id/search_list"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@+id/relative_layout"
+android:layout_marginRight="@dimen/txt_10"
+android:layout_marginLeft="@dimen/txt_10"
+android:visibility="gone"
+android:background="@drawable/background_gray_light_full"
+android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/background_gray_light_full"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/txt_search_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/geomanist_regular"
+        android:text="I forgot the password for my account. How do I reset my password?"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/txt_search_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/geomanist_regular"
+        android:text="How do I receive PayPal payments?"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/txt_search_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/geomanist_regular"
+        android:text="Can I cancel a PayPal payment that I've already sent?"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp" />
+</LinearLayout>
+</LinearLayout>
+
+
+    </Relati
+-->
+
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+
+

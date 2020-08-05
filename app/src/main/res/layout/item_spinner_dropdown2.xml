@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical"
+    android:text="Phone call"
+    android:gravity="left|center"
+    android:textAlignment="textStart"
+
+    android:textSize="14dp"
+    android:fontFamily="@font/geomanist_regular"
+    android:drawableRight="@drawable/down_arror_small"
+
+    android:drawableTint="@color/colorBlack"
+    android:background="@android:color/transparent"
+    android:paddingRight="5dp"
+    android:textColor="@color/colorTxtGray"
+    tools:ignore="RtlCompat">
+
+   <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Phone call"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"/>-->
+
+</TextView>

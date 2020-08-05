@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">gigpeople</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="facebook_app_id">2283653451747435</string>
+    <string name="google_maps_key">AIzaSyBAbVhOkHR7mH93Zrwj_duOctz-uGCft4Y</string>
+    <!-- old <string name="google_places_key">AIzaSyB6UX89xHozDtIv7ZtzRCMOVe2hdwKJsMc</string>-->
+    <string name="google_places_key">AIzaSyAz-a4n8snGsS3VTk6xaXhKFk5OapoKSKw</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string-array name="servicelist">
+        <item>Service List</item>
+        <item>Graphics</item>
+        <item>Digital Marketing</item>
+        <item>Writing Translation</item>
+        <item>Video Animation</item>
+    </string-array>
+
+    <string-array name="category">
+        <item>Category</item>
+        <item>Graphics</item>
+        <item>Digital Marketing</item>
+        <item>Writing Translation</item>
+        <item>Video Animation</item>
+    </string-array>
+
+    <string-array name="subcategory">
+        <item>Sub Category</item>
+        <item>SEO</item>
+        <item>Social Media Marketing</item>
+        <item>Web Traffic</item>
+        <item>Email Marketing</item>
+        <item>Local Listings</item>
+        <item>Domain Research</item>
+        <item>Web Analytics</item>
+    </string-array>
+
+    <string-array name="price">
+        <item>Price</item>
+        <item>10</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+    </string-array>
+
+    <string-array name="revisions">
+        <item>Revisions</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="cost">
+        <item>Cost</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+    </string-array>
+
+    <string-array name="noofdays">
+        <item>No. of Days</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>More than 5 days</item>
+    </string-array>
+
+    <string-array name="deliverytime">
+        <item>Delivery Time</item>
+        <item>1 Day</item>
+        <item>2 Days</item>
+        <item>3 Days</item>
+        <item>4 Days</item>
+        <item>More than 5 days</item>
+    </string-array>
+
+    <string-array name="menu">
+        <item>Select</item>
+        <item>Home</item>
+        <item>Gig Requests</item>
+        <item>My Gigs</item>
+        <item>My Sales</item>
+        <item>Manage Requests</item>
+        <item>My Orders</item>
+        <item>Favourites</item>
+        <item>Settings</item>
+        <item>Chat</item>
+        <item>Withdrawal</item>
+        <item>Analytics</item>
+        <item>Others</item>
+    </string-array>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="description">Description</string>
+    <string name="internet">Please check your network condition</string>
+    <string name="email_not_found">Email not found</string>
+
+</resources>

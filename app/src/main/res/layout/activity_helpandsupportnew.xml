@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/im_back"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/geomanist_regular"
+                android:gravity="center"
+                android:text="Help and Support"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorBgGray"/>
+-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="5dp"
+            android:focusable="true">
+
+            <LinearLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/txt_10"
+                android:layout_marginRight="@dimen/txt_10"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:background="@drawable/button_background_white_curve"
+                android:visibility="visible">
+
+                <SearchView
+                    android:id="@+id/txt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/txt_10"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/geomanist_regular"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:minLines="1"
+                    android:iconifiedByDefault="false"
+                    android:searchIcon="@null"
+                    android:searchHintIcon="@null"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/txt_11" />
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignRight="@+id/txt_search"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginRight="@dimen/txt_15"
+                    android:padding="3dp"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_icon" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_weight="0"
+                android:layout_marginTop="5dp"
+                android:id="@+id/recycleView"
+                android:layout_below="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:paddingBottom="60dp"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+android:background="@color/colorWhiteTran"
+    android:paddingBottom="3dp"
+    android:layout_alignParentBottom="true">
+            <Button
+
+                android:id="@+id/btn_contatcus"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Contact Us"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/hinted_geomanist_book"
+                android:background="@drawable/background_right_orange"/>
+</RelativeLayout>
+        </RelativeLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+

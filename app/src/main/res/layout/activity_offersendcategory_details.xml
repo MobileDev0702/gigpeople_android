@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBgGray"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    tools:context=".activity.RequestDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_icon" />
+
+            <Button
+                android:id="@+id/btn_back_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/txt_16"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/geomanist_regular"
+            android:text="Request Details"/>
+
+
+
+
+    </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorPrimary">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Peter John"
+                            android:textStyle="bold"
+                            android:layout_marginTop="40dp"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/geomanist_regular"
+                            android:textSize="@dimen/txt_16"
+                            android:textColor="@color/colorAccent"/>
+                        <RatingBar
+                            android:visibility="visible"
+
+                            android:theme="@style/RatingBar"
+                            android:stepSize="1"
+                            android:numStars="5"
+                            android:rating="3"
+                            android:id="@+id/ratingbar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_morereviews"
+                            android:layout_width="120dp"
+                            android:layout_height="25dp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="More Reviews"
+                            android:textAllCaps="false"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/hinted_geomanist_book"
+                            android:background="@drawable/background_right_orange"/>
+                    </LinearLayout>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/placeholder"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/edt_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.3"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/geomanist_regular"
+                                    android:text="Email"
+                                    android:layout_marginLeft="20dp"
+                                    android:textColor="@color/colorGrayText"
+                                   />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="0.65"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/button_background_profile_changes_three"
+                                        android:fontFamily="@font/geomanist_regular"
+                                        android:gravity="center"
+                                        android:text="Verified"
+                                        android:layout_marginRight="20dp"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/txt_13" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorTxtGray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.45"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/geomanist_regular"
+                                    android:text="Phone Number"
+                                    android:layout_marginLeft="20dp"
+                                    android:textColor="@color/colorGrayText"
+                                 />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="0.95"
+                                    android:gravity="center">
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/button_background_profile_changes_three"
+                                        android:fontFamily="@font/geomanist_regular"
+                                        android:gravity="center"
+                                        android:text="Verified"
+                                        android:layout_marginRight="20dp"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="@dimen/txt_13" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorTxtGray" />
+
+
+                    </LinearLayout>
+
+
+
+                    <!--  <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="35dp"
+                          android:gravity="center"
+                          android:layout_marginRight="20dp"
+                          android:layout_marginLeft="20dp">
+
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Main Category"
+                              android:layout_weight="1"
+                              android:textColor="@color/colorTxtGray"
+                              android:fontFamily="@font/geomanist_regular"/>
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Graphic Designing"
+                              android:layout_weight="1"
+                              android:textAlignment="textEnd"
+                              android:textColor="@color/colorBlack"
+                              android:fontFamily="@font/geomanist_regular"/>
+
+
+                      </LinearLayout>
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="0.5dp"
+                          android:background="@color/colorTxtGray"/>
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="35dp"
+                          android:gravity="center"
+                          android:layout_marginRight="20dp"
+                          android:layout_marginLeft="20dp">
+
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Sub Category"
+                              android:layout_weight="1"
+                              android:textColor="@color/colorTxtGray"
+                              android:fontFamily="@font/geomanist_regular"/>
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Logo Designing"
+                              android:layout_weight="1"
+                              android:textAlignment="textEnd"
+                              android:textColor="@color/colorBlack"
+                              android:fontFamily="@font/geomanist_regular"/>
+
+
+                      </LinearLayout>
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="0.5dp"
+                          android:background="@color/colorTxtGray"/>-->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Main Category"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTxtGray"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Graphic Designing"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorTxtGray"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sub Category"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTxtGray"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Logo Designing"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorTxtGray"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Image"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTxtGray"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+                       <!-- <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1 Day"
+                            android:visibility="gone"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/geomanist_regular"/>
+-->
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorTxtGray"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Time"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTxtGray"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1 Day"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorTxtGray"/>
+                    <!--  <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="35dp"
+                          android:gravity="center"
+                          android:layout_marginRight="20dp"
+                          android:layout_marginLeft="20dp">
+
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Qty"
+                              android:layout_weight="1"
+                              android:textColor="@color/colorTxtGray"
+                              android:fontFamily="@font/geomanist_regular"/>
+
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="2"
+                              android:layout_weight="1"
+                              android:textAlignment="textEnd"
+                              android:textColor="@color/colorBlack"
+                              android:fontFamily="@font/geomanist_regular"/>
+
+
+                      </LinearLayout>
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="0.5dp"
+                          android:background="@color/colorTxtGray"/>-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTxtGray"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="$100.0"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorTxtGray"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTxtGray"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorTxtGray"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorTxtGray"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam rica and conseteur."
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/geomanist_regular"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="My Offer"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/hinted_geomanist_regular_0"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum adipiscing elit consectutor elit dummy text"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/hinted_geomanist_regular_0"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Time"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+
+                            android:fontFamily="@font/hinted_geomanist_regular_0"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1 Day"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_weight="1"
+                            android:gravity="end"
+
+                            android:fontFamily="@font/hinted_geomanist_regular_0"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:layout_weight="1"
+
+                            android:fontFamily="@font/hinted_geomanist_regular_0"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="$1.00"
+                            android:textColor="@color/colorBlack"
+                            android:layout_weight="1"
+                            android:gravity="end"
+
+                            android:fontFamily="@font/hinted_geomanist_regular_0"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/hinted_geomanist_regular_0"
+                        android:text="Description"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua_ut_enim_ad_minim_veniam de mushi conse cosa de rica and conseteur."
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/hinted_geomanist_regular_0"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+<TextView
+    android:id="@+id/txt_statausaccepted"
+    android:layout_width="70dp"
+    android:layout_height="20dp"
+    android:background="@color/colorGreen"
+    android:text="Accepted"
+    android:visibility="gone"
+    android:textSize="12sp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_marginTop="15dp"
+    android:textColor="@color/colorPrimaryDark"
+    android:fontFamily="@font/hinted_geomanist_regular_0"/>
+                <TextView
+                    android:id="@+id/txtstatusrejected"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorRed"
+                    android:text="Rejected"
+                    android:visibility="gone"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/hinted_geomanist_regular_0"/>
+    <TextView
+        android:id="@+id/txt_waiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:text="Waiting for Acceptance"
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:padding="3dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/hinted_geomanist_regular_0"/>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="Update"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/hinted_geomanist_book"
+        android:background="@drawable/background_right_orange"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+</LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+                <LinearLayout
+                    android:id="@+id/linearOne"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.AppBarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            app:tabGravity="fill"
+                            app:tabTextAppearance="@style/MyTabTextAppearance"
+                            app:tabMode="fixed"
+                            app:tabSelectedTextColor="@color/colorAccent"
+                            app:tabTextColor="@color/colorBlack" />
+                    </android.support.design.widget.AppBarLayout>
+
+                </LinearLayout>
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpage"
+                    android:layout_below="@+id/relativeOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="visible"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    tools:ignore="NotSibling" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg_lightgray_fill"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/exclamation"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Order Dispute"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_17"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/geomanist_regular"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Amelia Thomas stated the issue is ok. The requested additional work which wasn't in the scope of the original order"
+                        android:fontFamily="@font/geomanist_regular"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <Button
+                    android:id="@+id/btn_offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/geomanist_regular"
+                    android:text="OFFER"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:background="@drawable/background_right_orange"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <Button
+                    android:id="@+id/btn_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/geomanist_regular"
+                    android:text="DELIVERY NOW"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:background="@drawable/background_right_orange"/>
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"/>
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/geomanist_regular"
+                    android:text="CANCEL/REFUND"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_bg_gray_fill"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+</LinearLayout>

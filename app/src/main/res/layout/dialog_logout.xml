@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_gravity="center"
+android:background="@drawable/btn_bg_white_curve"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Logout"
+        android:gravity="center"
+        android:background="@drawable/green_fill_corner_top"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/geomanist_regular"
+        android:textSize="16sp"/>
+
+    <!-- <View
+         android:layout_width="200dp"
+         android:layout_height="1dp"
+         android:background="@color/black"/>
+ -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Are you sure you want to Logout?"
+        android:fontFamily="@font/geomanist_regular"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorBlack"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="No"
+            android:fontFamily="@font/geomanist_regular"
+            android:textAllCaps="false"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Yes"
+            android:fontFamily="@font/geomanist_regular"
+            android:textAllCaps="false"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

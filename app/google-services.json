@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "744779804656",
+    "firebase_url": "https://gigpeople.firebaseio.com",
+    "project_id": "gigpeople",
+    "storage_bucket": "gigpeople.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744779804656:android:40151feb47f59192793735",
+        "android_client_info": {
+          "package_name": "com.gigpeople.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744779804656-cvl134nd2ndbv4vspabmhblmega6ttqo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gigpeople.app",
+            "certificate_hash": "f7adfaa55ac6af87dc048a21e2e0bfd49fc68f96"
+          }
+        },
+        {
+          "client_id": "744779804656-d45kgeek8jn24gd12udk33ko4tmluub3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gigpeople.app",
+            "certificate_hash": "1c26e9d319d749b249d6d8a15fd2d305383827b4"
+          }
+        },
+        {
+          "client_id": "744779804656-1i4dh4si4hedal7cvfpkh3p97ce7ih45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbVhOkHR7mH93Zrwj_duOctz-uGCft4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744779804656-1i4dh4si4hedal7cvfpkh3p97ce7ih45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

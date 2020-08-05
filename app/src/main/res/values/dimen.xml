@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!--String size-->
+    <dimen name="txt_15">15sp</dimen>
+    <dimen name="txt_14">14sp</dimen>
+    <dimen name="txt_13">13sp</dimen>
+    <dimen name="txt_12">12sp</dimen>
+    <dimen name="txt_11">11sp</dimen>
+    <dimen name="txt_10">10sp</dimen>
+    <dimen name="txt_16">16sp</dimen>
+    <dimen name="txt_17">17sp</dimen>
+    <dimen name="txt_20">20sp</dimen>
+
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".fragment.MysaleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:weightSum="1.5"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/background_right_orange"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/txt_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hinted_geomanist_book"
+                android:textAlignment="center"
+                android:textSize="@dimen/txt_16"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Balance"
+                android:textAlignment="center"
+                android:fontFamily="@font/geomanist_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_12"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/background_blue"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/total_earning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hinted_geomanist_book"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Earning"
+                android:textAlignment="center"
+                android:fontFamily="@font/geomanist_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_12"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/background_green"
+            android:layout_weight="0.5">
+            <TextView
+                android:id="@+id/txt_revenue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hinted_geomanist_book"
+                android:textAlignment="center"
+                android:textSize="@dimen/txt_16"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Revenue of this month"
+                android:textAlignment="center"
+                android:fontFamily="@font/geomanist_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_12"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:elevation="2dp"
+            android:layout_marginTop="2dp"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/MyTabTextAppearance"
+            app:tabTextColor="@color/colorBlack" />
+    </android.support.design.widget.AppBarLayout>
+    <!--</android.support.v7.widget.Toolbar>-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

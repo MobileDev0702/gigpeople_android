@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add Photo"
+        android:gravity="center"
+        android:background="@drawable/white_fill_corner_top"
+        android:fontFamily="@font/geomanist_regular"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBgGray"/>
+    <TextView
+        android:id="@+id/txt_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Gallery"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/geomanist_regular"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBgGray"/>
+
+    <TextView
+        android:id="@+id/txt_take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Take Photo"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/geomanist_regular"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"/>
+
+    <Button
+        android:background="@drawable/white_fill_corner_bottom"
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:fontFamily="@font/geomanist_regular"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"/>
+</LinearLayout>

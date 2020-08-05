@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:background="@color/colorPrimary">
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="5dp"/>
+    <LinearLayout
+        android:id="@+id/secondlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="8dp"
+            android:layout_height="100dp"
+            android:background="@drawable/background_green_one"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|start">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="75dp"
+                app:riv_corner_radius="5dip"
+                android:src="@drawable/logodesignnew"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="start">
+
+
+                <TextView
+                    android:id="@+id/txt_gigname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gig Name"
+                    android:textSize="@dimen/txt_16"
+                    android:fontFamily="@font/hinted_geomanist_regular_0"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_gigprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/geomanist_regular"
+                    android:textSize="@dimen/txt_20"
+                    android:textStyle="bold"
+                    android:text="$10.00"/>
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/img_share"
+                android:layout_width="40dp"
+                android:layout_gravity="top"
+                android:layout_height="40dp"
+                android:src="@drawable/share_icon"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:textSize="10sp"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/colorGreen"
+                android:fontFamily="@font/geomanist_regular"
+                android:text="Online now"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imagesatusicon"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                android:src="@drawable/circlebackground_orange"/>
+            <TextView
+                android:id="@+id/txtcreateddate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/geomanist_regular"
+                android:text="21/02/2019"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txt_messagetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:textColor="@color/colorBlue"
+                android:fontFamily="@font/geomanist_regular"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="10dp"
+                android:text="Last seen: 2 mins ago"/>
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+</LinearLayout>

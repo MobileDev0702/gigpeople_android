@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_to_bg"
+            android:gravity="center|end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/chat_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geomanist_regular"
+                android:padding="5dp"
+                android:text="2 mins ago"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="textEnd"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImag"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circlebackground_orange"
+            android:src="@drawable/profile_placeholder" />
+
+    </LinearLayout>
+
+</LinearLayout>

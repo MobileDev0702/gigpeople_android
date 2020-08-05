@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgGray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_icon"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geomanist_regular"
+            android:text="Share"
+            android:layout_centerInParent="true"
+            android:textSize="17sp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"/>
+
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share via:"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:textAlignment="center"
+
+
+        android:fontFamily="@font/hinted_geomanist_book"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+<ImageView
+    android:id="@+id/fb_share"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/fblogo"
+    />
+        <View
+            android:layout_width="7dp"
+            android:layout_height="0dp"/>
+        <ImageView
+            android:id="@+id/fb_google"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/google_plus"
+            />
+        <View
+            android:layout_width="7dp"
+            android:layout_height="0dp"/>
+        <ImageView
+            android:id="@+id/fb_twitter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/twitter_logo"
+            />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

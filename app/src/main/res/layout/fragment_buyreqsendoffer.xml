@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:id="@+id/linearEdit"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_marginLeft="15dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/button_background_white_curve"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/hinted_geomanist_book"
+        android:hint="Search by Name"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:textSize="@dimen/txt_12" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:padding="2dp"
+        android:src="@drawable/search_icon" />
+
+  </LinearLayout>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/recycleView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/colorBgGray"/>
+
+</LinearLayout>

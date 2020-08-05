@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back_icon"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geomanist_regular"
+            android:text="Withdrawal"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        android:background="@color/colorBgGray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/paypal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg_white">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/img_selected_paypal"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/greentick"
+                    android:layout_gravity="right"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/paypala"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hinted_geomanist_regular_0"
+                    android:text="Paypal"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="20dp"
+                    android:textAlignment="center"/>
+</RelativeLayout>
+            </LinearLayout>
+<View
+    android:layout_width="20dp"
+    android:layout_height="0dp"/>
+            <LinearLayout
+                android:id="@+id/bank_layout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/btn_bg_white">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/img_selected_bank"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/greentick"
+                    android:visibility="gone"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"/>
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/bank"
+                    android:layout_centerInParent="true"
+
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hinted_geomanist_regular_0"
+                    android:text="Bank details"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:textAlignment="center"/>
+</RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_bg_orange_fill"
+            android:layout_margin="20dp"
+            android:text="SUBMIT"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/hinted_geomanist_book"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
