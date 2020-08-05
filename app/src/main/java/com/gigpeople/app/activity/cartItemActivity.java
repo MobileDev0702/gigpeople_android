@@ -65,6 +65,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import co.paystack.android.Paystack;
+import co.paystack.android.PaystackSdk;
+import co.paystack.android.Transaction;
+import co.paystack.android.model.Charge;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -124,6 +128,18 @@ public class cartItemActivity extends AppCompatActivity implements TextWatcher {
     String card_year, card_month, card_cvv, card_num;
     Card cardToSave;
 
+    // Paystack....
+    String cardNumber = "4084084084084081";
+
+    int expiryMonth = 8; //any month in the future
+
+    int expiryYear = 2021; // any year in the future
+
+    String cvv = "408";
+
+    Charge charge;
+    co.paystack.android.model.Card card;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,7 +173,56 @@ public class cartItemActivity extends AppCompatActivity implements TextWatcher {
                 }
             }
         };
+        initPaystack();
+    }
 
+    private void initPaystack() {
+        PaystackSdk.initialize(context);
+        card = new co.paystack.android.model.Card(cardNumber, expiryMonth, expiryYear, cvv);
+    }
+
+    private void performCharge() {
+        //create a Charge object
+        charge = new Charge();
+
+        //set the card to charge
+        charge.setCard(card);
+
+        //call this method if you set a plan
+        //charge.setPlan("PLN_yourplan");
+
+        charge.setEmail("mytestemail@test.com"); //dummy email address
+
+        charge.setAmount(Integer.parseInt(total_cost)); //test amount
+
+        PaystackSdk.chargeCard(cartItemActivity.this, charge, new Paystack.TransactionCallback() {
+            @Override
+            public void onSuccess(Transaction transaction) {
+                // This is called only after transaction is deemed successful.
+                // Retrieve the transaction, and send its reference to your server
+                // for verification.
+                String paymentReference = transaction.getReference();
+                if (GlobalMethods.isNetworkAvailable(cartItemActivity.this)) {
+                    toClickOrder(user_id);
+                } else {
+                    GlobalMethods.Toast(context, "No internet connection");
+                }
+                Toast.makeText(cartItemActivity.this, "Transaction Successful! payment reference: "
+                        + paymentReference, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void beforeValidate(Transaction transaction) {
+                // This is called only before requesting OTP.
+                // Save reference so you may send to server. If
+                // error occurs with OTP, you should still verify on server.
+            }
+
+            @Override
+            public void onError(Throwable error, Transaction transaction) {
+                //handle error here
+            }
+        });
     }
 
     @OnClick({R.id.btn_back_arrow, R.id.btn_cart, R.id.btn_proceedpayment, R.id.btn_cancel})
@@ -180,6 +245,7 @@ public class cartItemActivity extends AppCompatActivity implements TextWatcher {
                     LinearLayout linearpaypal = (LinearLayout) dialog.findViewById(R.id.linear_paypal);
                     LinearLayout linearwechat = (LinearLayout) dialog.findViewById(R.id.linear_wechat);
                     LinearLayout linearcredit = (LinearLayout) dialog.findViewById(R.id.linear_creditcard);
+                    LinearLayout linearpaystack = (LinearLayout) dialog.findViewById(R.id.linear_paystack);
                     ImageView imgclose = (ImageView) dialog.findViewById(R.id.img_close);
                     imgclose.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -266,6 +332,16 @@ public class cartItemActivity extends AppCompatActivity implements TextWatcher {
                                 toClickOrder(user_id);
                             } else {
                                 GlobalMethods.Toast(context, getString(R.string.internet));
+                            }
+                        }
+                    });
+                    linearpaystack.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                            payment_option = "4";
+                            if (card.isValid()) {
+                                performCharge();
                             }
                         }
                     });

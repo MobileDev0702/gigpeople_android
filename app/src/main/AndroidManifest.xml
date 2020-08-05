@@ -34,6 +34,10 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="co.paystack.android.PublicKey"
+            android:value="pk_test_96312a67dc8f100304cf2f3576d3dab38073101b"/>
+
         <!--office account-->
         <provider
             android:name="com.facebook.FacebookContentProvider"

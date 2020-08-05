@@ -62,6 +62,10 @@ import java.math.BigDecimal;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import co.paystack.android.Paystack;
+import co.paystack.android.PaystackSdk;
+import co.paystack.android.Transaction;
+import co.paystack.android.model.Charge;
 import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -132,7 +136,7 @@ public class ManageRequestOfferDetailsActivity extends AppCompatActivity impleme
     Context context;
     EditText edtCardNo, edtCardMonth, edtCardYear, edtCvv;
     String card_year, card_month, card_cvv, card_num, payment_id = "0";
-    Card cardToSave;
+    com.stripe.android.model.Card cardToSave;
     Checkout checkout;
     PaymentsRequest paymentsRequest;
 
@@ -152,6 +156,18 @@ public class ManageRequestOfferDetailsActivity extends AppCompatActivity impleme
     //ASLIi1IubHx_ejlla-S47N3nM_AfCuK7yu4yCrKATqCT5GswjRTX0cNRpLd2pLUlvytLm5rz337vkRRt
     //PRODUCTION
     //AZ4iMP729BWXV52LGI3cNooYTR-C0qpsyh-h-ko7iDZp7JFrF28A-YgMIPL1R3jqRE7kVg1CHeBfB0ZW
+
+    // Paystack....
+    String cardNumber = "4084084084084081";
+
+    int expiryMonth = 8; //any month in the future
+
+    int expiryYear = 2021; // any year in the future
+
+    String cvv = "408";
+
+    Charge charge;
+    co.paystack.android.model.Card card;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -174,6 +190,51 @@ public class ManageRequestOfferDetailsActivity extends AppCompatActivity impleme
             request_id = getIntent().getStringExtra("request_id");
             setOfferDetails();
         }
+        initPaystack();
+    }
+
+    private void initPaystack() {
+        PaystackSdk.initialize(context);
+        card = new co.paystack.android.model.Card(cardNumber, expiryMonth, expiryYear, cvv);
+    }
+
+    private void performCharge() {
+        //create a Charge object
+        charge = new Charge();
+
+        //set the card to charge
+        charge.setCard(card);
+
+        //call this method if you set a plan
+        //charge.setPlan("PLN_yourplan");
+
+        charge.setEmail("mytestemail@test.com"); //dummy email address
+
+        charge.setAmount(Integer.parseInt(price)); //test amount
+
+        PaystackSdk.chargeCard(ManageRequestOfferDetailsActivity.this, charge, new Paystack.TransactionCallback() {
+            @Override
+            public void onSuccess(Transaction transaction) {
+                // This is called only after transaction is deemed successful.
+                // Retrieve the transaction, and send its reference to your server
+                // for verification.
+                String paymentReference = transaction.getReference();
+                Toast.makeText(ManageRequestOfferDetailsActivity.this, "Transaction Successful! payment reference: "
+                        + paymentReference, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void beforeValidate(Transaction transaction) {
+                // This is called only before requesting OTP.
+                // Save reference so you may send to server. If
+                // error occurs with OTP, you should still verify on server.
+            }
+
+            @Override
+            public void onError(Throwable error, Transaction transaction) {
+                //handle error here
+            }
+        });
     }
 
     private void setOfferDetails() {
@@ -408,6 +469,17 @@ public class ManageRequestOfferDetailsActivity extends AppCompatActivity impleme
                 } else {
                     GlobalMethods.Toast(ManageRequestOfferDetailsActivity.this, getString(R.string.internet));
                 }*/
+            }
+        });
+
+        linearpaystack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                payment_option = "4";
+                if (card.isValid()) {
+                    performCharge();
+                }
             }
         });
 
