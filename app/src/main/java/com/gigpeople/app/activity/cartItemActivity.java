@@ -201,12 +201,12 @@ public class cartItemActivity extends AppCompatActivity implements TextWatcher {
                 // This is called only after transaction is deemed successful.
                 // Retrieve the transaction, and send its reference to your server
                 // for verification.
-                String paymentReference = transaction.getReference();
                 if (GlobalMethods.isNetworkAvailable(cartItemActivity.this)) {
                     toClickOrder(user_id);
                 } else {
                     GlobalMethods.Toast(context, "No internet connection");
                 }
+                String paymentReference = transaction.getReference();
                 Toast.makeText(cartItemActivity.this, "Transaction Successful! payment reference: "
                         + paymentReference, Toast.LENGTH_LONG).show();
             }

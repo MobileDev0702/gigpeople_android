@@ -218,6 +218,11 @@ public class ManageRequestOfferDetailsActivity extends AppCompatActivity impleme
                 // This is called only after transaction is deemed successful.
                 // Retrieve the transaction, and send its reference to your server
                 // for verification.
+                if (GlobalMethods.isNetworkAvailable(ManageRequestOfferDetailsActivity.this)) {
+                    callAcceptReject();
+                } else {
+                    GlobalMethods.Toast(ManageRequestOfferDetailsActivity.this, getString(R.string.internet));
+                }
                 String paymentReference = transaction.getReference();
                 Toast.makeText(ManageRequestOfferDetailsActivity.this, "Transaction Successful! payment reference: "
                         + paymentReference, Toast.LENGTH_LONG).show();

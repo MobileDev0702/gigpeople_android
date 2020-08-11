@@ -69,6 +69,7 @@ import org.json.JSONObject;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
 import butterknife.BindView;
@@ -230,6 +231,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 Log.e("TokenError",e.getMessage());
             }
         }
+
         email=edtEmail.getText().toString();
         password=edtPassword.getText().toString();
         Log.e(TAG,"LoginRequest: \nEmail: "+email+"\nPassword: "+password+"\nToken: "+token+"\nDeviceType: "+"Android");

@@ -25,10 +25,10 @@ import java.util.regex.Pattern;
 
 public class GlobalMethods {
 
-    public static final String BASE_URL = "http://mobwebapps.com/gig_people/api/";
+    public static final String BASE_URL = "http://192.168.3.161/gig_people/api/"; // "http://mobwebapps.com/gig_people/api/"
 
-    public static final String GIG_IMAGE_URL = "http://mobwebapps.com/gig_people/uploads/gig_image/";
-    public static final String REQUEST_IMAGE_URL = "http://mobwebapps.com/gig_people/uploads/request_image/";
+    public static final String GIG_IMAGE_URL = "http://192.168.3.161/gig_people/uploads/gig_image/"; // "http://mobwebapps.com/gig_people/uploads/gig_image/"
+    public static final String REQUEST_IMAGE_URL = "http://192.168.3.161/gig_people/uploads/request_image/"; // "http://mobwebapps.com/gig_people/uploads/request_image/"
 
     public static final String FIREBASE_CHAT_URL = "https://gigpeople.firebaseio.com/";
 
