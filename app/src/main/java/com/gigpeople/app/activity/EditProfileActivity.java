@@ -129,6 +129,8 @@ public class EditProfileActivity extends AppCompatActivity {
 
     @BindView(R.id.autoCompleteTextView)
     AutoCompleteTextView autoCompleteTextView;
+    @BindView(R.id.edt_other_link)
+    EditText edtLink;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private Uri uri;
     private Bitmap bitmap;
@@ -137,7 +139,7 @@ public class EditProfileActivity extends AppCompatActivity {
     int switch_status = 1;
     List<ImageAddModel> imageAddModelList;
     LanguageAdapter languageAdapter;
-    String lang, user_id, str_image, location = "", lattitude, longitude, languages = "", about = "", first_name, last_name, email, mobile, mobile_country_code, country, skills;
+    String lang, user_id, str_image, location = "", lattitude, longitude, languages = "", about = "", otherlink = "", first_name, last_name, email, mobile, mobile_country_code, country, skills;
     ProgressDialog progressDialog;
     ApiService apiService;
     private static final String TAG = EditProfileActivity.class.getSimpleName();
@@ -253,6 +255,7 @@ public class EditProfileActivity extends AppCompatActivity {
         mobile = edtPhone.getText().toString();
         mobile = mobile_country_code + " " + mobile;
         about = edtAbout.getText().toString();
+        otherlink = edtLink.getText().toString();
         skills = autoCompleteTextView.getText().toString();
         String languages_api = "";
         for (int i = 0; i < imageAddModelList.size(); i++) {
@@ -269,7 +272,7 @@ public class EditProfileActivity extends AppCompatActivity {
         Log.e(TAG, "UpdateProfileReq: " + "\nUserId: " + user_id + "\nFirstName: " + first_name + "\nLatName: " + last_name + "\nEmail: " + email + "\nMobileNumber: " + mobile
                 + "\nAddress: " + location + "\nLattitude: " + lattitude + "\nLongitude: " + longitude + "\nCountry: " + country + "\nProfileImage: " + str_image
                 + "\nLanguages: " + languages_api + "\nAbout: " + about + "\nSkills: " + skills);
-        Call<LoginResponse> call = apiService.callEditProfileAPI(user_id, first_name, last_name, email, mobile, location, lattitude, longitude, country, str_image, languages_api, about, skills);
+        Call<LoginResponse> call = apiService.callEditProfileAPI(user_id, first_name, last_name, email, mobile, location, lattitude, longitude, country, str_image, languages_api, about, skills, otherlink);
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
@@ -360,6 +363,7 @@ public class EditProfileActivity extends AppCompatActivity {
                             lattitude = resp.getUserDetails().getLattitude();
                             longitude = resp.getUserDetails().getLongitude();
                             about = resp.getUserDetails().getAbout();
+                            otherlink = resp.getUserDetails().getLink();
                             languages = resp.getUserDetails().getLanguage();
                             str_image = resp.getUserDetails().getProfile();
                             skills = resp.getUserDetails().getSkills();
@@ -372,6 +376,7 @@ public class EditProfileActivity extends AppCompatActivity {
                                 edtPhone.setText(mobile);
                                 ccp.setCountryForPhoneCode(Integer.parseInt(mobile_country_code));
                                 edtAbout.setText(about);
+                                edtLink.setText(otherlink);
                                 autocompleteFragment.setText(location);
                                 //for language list
                                 String TEMP[] = languages.split(",");

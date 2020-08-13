@@ -27,7 +27,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -78,6 +80,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -213,7 +216,7 @@ public class AddNewGigActivity extends AppCompatActivity {
 
     public static String[] thumbColumns = {MediaStore.Video.Thumbnails.DATA};
 
-    String user_id, images, tittle, type, price, delivery_time="", shipping = "1", shippinprice = "0", revisions="", description, gig_staus = "1";
+    String user_id, images, tittle, type, price, delivery_time="", shipping = "2", shippinprice = "0", revisions="", description, gig_staus = "1";
     public static final String TAG = AddNewGigActivity.class.getSimpleName();
     ApiService apiService;
     List<RevisonsModel> revisonsModelList;
@@ -247,6 +250,28 @@ public class AddNewGigActivity extends AppCompatActivity {
         init();
 
         CategoryDialog();
+
+        edtPrice.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() == 0) {
+                    edtShippingprice.setText("0.00");
+                } else {
+                    DecimalFormat df = new DecimalFormat("#.##");
+                    edtShippingprice.setText(String.valueOf(df.format(Double.parseDouble(String.valueOf(charSequence)) * 0.2)));
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
 
         itemClickListener = new ExtraGigAdapter.ItemClickListener() {
             public void itemClick() {

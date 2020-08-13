@@ -311,6 +311,9 @@ public class UserDetails {
     @SerializedName("about")
     @Expose
     public String about;
+    @SerializedName("profile_link")
+    @Expose
+    public String link;
     @SerializedName("skills")
     @Expose
     public String skills;
@@ -469,6 +472,10 @@ public class UserDetails {
     public void setAbout(String about) {
         this.about = about;
     }
+
+    public String getLink() { return link; }
+
+    public void setLink(String link) { this.link = link; }
 
     public String getSkills() {
         return skills;

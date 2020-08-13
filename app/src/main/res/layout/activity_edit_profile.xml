@@ -517,6 +517,42 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/geomanist_regular"
+                            android:text="My link" />
+
+                        <EditText
+                            android:id="@+id/edt_other_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/geomanist_regular"
+                            android:inputType="textWebEditText"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorGrayText"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"

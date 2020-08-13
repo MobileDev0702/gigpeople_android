@@ -123,6 +123,8 @@ public class ProfileFragment extends Fragment {
     TextView txtMobile;
     @BindView(R.id.txt_about)
     TextView txtAbout;
+    @BindView(R.id.txt_link)
+    TextView txtLink;
     @BindView(R.id.txt_wallet)
     TextView txtWallet;
     @BindView(R.id.img_profile)
@@ -349,6 +351,7 @@ public class ProfileFragment extends Fragment {
                                 txtMobile.setText("+" + mobile_country_code + " " + mobile_number);
                             }
                             txtAbout.setText(resp.getUserDetails().getAbout());
+                            txtLink.setText(resp.getUserDetails().getLink());
                             txtWallet.setText("$" + resp.getUserDetails().getWallet());
                             txtLanguagesKnown.setText(resp.getUserDetails().getLanguage());
                             txtGigPost.setText(resp.getUserDetails().getNoOfGigpost());

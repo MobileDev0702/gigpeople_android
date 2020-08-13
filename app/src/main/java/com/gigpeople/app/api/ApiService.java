@@ -110,7 +110,8 @@ public interface ApiService {
                                            @Field("profile_image") String profile_image,
                                            @Field("language") String language,
                                            @Field("about") String about,
-                                           @Field("skills") String skills);
+                                           @Field("skills") String skills,
+                                           @Field("link") String link);
 
     //9. SignUp
     @FormUrlEncoded
